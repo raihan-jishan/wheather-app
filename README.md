@@ -1,4 +1,10 @@
 # `WHEATHER-APP ↘`
+##  `Technologys ⬇`
+### 1. React js -- version 18^.. 
+#### `Other modules`
+### 2. Axios, OpenWheather-APi, React hooks 
+#### styling ----
+### 3. Custom css, And react-icons..`...`
 <img src='https://raw.githubusercontent.com/raihan-jishan/Github-cover-photo/main/images/Screenshot%20(143).png' alt='github photo' />
 # Getting Started with Create React App
 
