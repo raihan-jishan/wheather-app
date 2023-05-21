@@ -1,12 +1,11 @@
-import Wheather from "./Wheather/Wheather";
-import "./App.css"
+ import "./App.css";
+import Routes from "./Routing/Routes";
 function App() {
-
-
   return (
-  <>
-  <Wheather /> 
-  </>
+    <>
+     
+      <Routes />
+    </>
   );
 }
 

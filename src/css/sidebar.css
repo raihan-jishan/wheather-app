@@ -1,0 +1,47 @@
+/* design the whole sidebar */
+.infoContainer .infoLinks {
+  background: rgba(99, 99, 99, 0.137);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 100%;
+  padding: 20px 0;
+  transition: all 0.5s ease;
+}
+/* infoLinks */
+.infoLinks ul {
+  margin: 20px;
+}
+.infoLinks ul li {
+  margin-top: 50px;
+  text-align: center;
+  border-radius: 1rem;
+}
+.infoLinks ul li a {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.infoLinks ul li:hover{
+    background-color: rgba(192, 192, 192, 0.199);
+    transition: 0.3s;
+    transform: scale(0.9);
+    color: #000000; 
+}
+.infoLinks ul li a:hover{
+    color: #000000;  
+}
+/* mobileMenu */
+.mobileMenu{
+  display: none;
+}
+/* responsibe */
+@media screen and (max-width: 700px) {
+  .infoContainer {
+    display: none;
+  }
+ 
+   
+
+}

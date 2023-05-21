@@ -1,24 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
 body {
-  font-family: "Outfit", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 
 p {
-  font-size: 1.6rem;
-}
-
-h1 {
-  font-size: 6rem;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 .app {
@@ -39,30 +36,29 @@ h1 {
   top: 0;
   left: 0;
   z-index: -1;
+  animation-name: example;
+  animation-duration: 500s;
+  animation-iteration-count: infinite;
 }
 
-.app .search {
-  text-align: center;
-  padding: 1rem;
+@keyframes example {
+  0% {
+    background: url("https://images.unsplash.com/photo-1667645336865-154f91594cfb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDl8NnNNVmpUTFNrZVF8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60") no-repeat center/cover;
+  }
+  25% {
+    background-image: url("https://media.istockphoto.com/id/1069974888/photo/snow-texture-on-black-background-for-overlay.jpg?s=612x612&w=0&k=20&c=RNIEdKda4MV-jbzhsFj7IMHu5eeDJO4BcFH78qaL5fA=");
+  }
+  50% {
+    background-image: url("https://media.istockphoto.com/id/178988183/photo/house-in-bad-summer-thunderstorm.jpg?s=612x612&w=0&k=20&c=KAxdY1mM4H7ixKhz731XXYGf5S081bsHb-SyXfNDUdI=");
+  }
+  75% {
+    background-image: url("https://media.istockphoto.com/id/595124884/photo/driving-at-sunset.jpg?s=612x612&w=0&k=20&c=725zI1Mow-9pja1UOtEVcERpcLmTH4pVLDZVScFP2Wo=");
+  }
+  100% {
+    background-image: url("https://media.istockphoto.com/id/505672690/photo/stormy-sky.jpg?s=612x612&w=0&k=20&c=C5ROQSXI8S2y2ClO37KPJ3K033g90pTirNXutFha2tY=");
+  }
 }
-
-.app input {
-  padding: 0.7rem 1.5rem;
-  font-size: 1.6rem;
-  border-radius: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.37);
-  background: rgba(114, 114, 114, 0.1);
-  color: #f8f8f8;
-  font-weight: bold;
-  outline: none;
-  caret-color: #2dbf64;
-  font-weight: bold;
-}
-
-::placeholder {
-  color: #f8f8f8;
-}
-
+ 
 .container {
   max-width: 700px;
   /* height: 700px; */
@@ -103,14 +99,17 @@ h1 {
   font-weight: 700;
 }
 
-.location{
+.location {
   background-color: #7e7e7e1f;
   border-radius: 0.5rem;
 }
- .temp{
+.location p {
+  font-size: 2.5rem;
+}
+.temp {
   background-color: #7e7e7e11;
   border-radius: 0.7rem;
- }
+}
 /* responsibe query */
 @media screen and (max-width: 570px) {
   .app {
@@ -122,5 +121,8 @@ h1 {
     display: flex;
     padding: 0.7rem 0rem;
   }
- 
+  .container div {
+    flex-direction: column;
+    margin-top: 10px;
+  }
 }
