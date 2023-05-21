@@ -29,21 +29,20 @@
   margin-top: -50px;
   font-weight: 500;
 }
-.infos{
- position: absolute;
- margin-top: -170px;
- background: #c4c4c41e;
- padding: 12px 20px; 
- border-radius: 1rem;
+.infos {
+  position: absolute;
+  margin-top: -170px;
+  background: #c4c4c41e;
+  padding: 12px 20px;
+  border-radius: 1rem;
 }
 @media screen and (max-width: 700px) {
-  .row{
-    flex-direction: column;
-    
+  .app {
+    overflow: scroll;
   }
 }
 @media screen and (max-width: 930px) {
-  .row{
+  .row {
     flex-direction: column;
     margin-top: 20px;
     background: transparent;
@@ -53,32 +52,30 @@
   }
 }
 @media screen and (max-width: 900px) {
-  body{
- background: linear-gradient(#414141,
- #000000);
- 
+  body {
+    background: linear-gradient(#414141, #000000);
+
     opacity: 0.8;
-}
-@keyframes example {
+  }
   
-0% {
-  background: url("https://burst.shopifycdn.com/photos/cave-of-wonder-and-lights.jpg?width=1200&format=pjpg&exif=1&iptc=1") no-repeat center/cover;
-  width: 100%;
-  height: 100vh !important;
-}
-25% {
-  background-image: url("https://burst.shopifycdn.com/photos/aerial-photo-of-paved-road-surrounded-by-trees.jpg?width=1200&format=pjpg&exif=1&iptc=1");
-}
-50% {
-  background-image: url("https://burst.shopifycdn.com/photos/red-and-blue-shoreline-iphone-screen.jpg?width=373&format=pjpg&exif=1&iptc=1");
-}
-75% {
-  background-image: url("https://burst.shopifycdn.com/photos/hiking-though-giants.jpg?width=373&format=pjpg&exif=1&iptc=1");
-}
-100% {
-  background-image: url("https://burst.shopifycdn.com/photos/seaweed-washed-up-on-beach.jpg?width=373&format=pjpg&exif=1&iptc=1");
-}
-
-
-}
+  @keyframes example {
+    0% {
+      background: url("https://burst.shopifycdn.com/photos/cave-of-wonder-and-lights.jpg?width=1200&format=pjpg&exif=1&iptc=1")
+        no-repeat center/cover;
+      width: 100%;
+      height: 100vh !important;
+    }
+    25% {
+      background-image: url("https://burst.shopifycdn.com/photos/aerial-photo-of-paved-road-surrounded-by-trees.jpg?width=1200&format=pjpg&exif=1&iptc=1");
+    }
+    50% {
+      background-image: url("https://burst.shopifycdn.com/photos/red-and-blue-shoreline-iphone-screen.jpg?width=373&format=pjpg&exif=1&iptc=1");
+    }
+    75% {
+      background-image: url("https://burst.shopifycdn.com/photos/hiking-though-giants.jpg?width=373&format=pjpg&exif=1&iptc=1");
+    }
+    100% {
+      background-image: url("https://burst.shopifycdn.com/photos/seaweed-washed-up-on-beach.jpg?width=373&format=pjpg&exif=1&iptc=1");
+    }
+  }
 }
