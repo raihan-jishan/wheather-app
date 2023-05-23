@@ -1,3 +1,9 @@
+/*
+  title: itemmLocation.js. 
+  desc: item of location cards . 
+  date: 21 - 5 - 2023. 
+
+*/
 import React, { useState } from "react";
 import axios from "axios";
 import { HiCloud } from "react-icons/hi";
@@ -18,7 +24,14 @@ export default function Locationitem(props) {
   const name = props.location;
   return (
     <div className="rows" onMouseOver={fetchWheather}>
-      <img src={imageTo_Url} alt="404 module not found!" />
+      <img
+        src={
+          !imageTo_Url
+            ? "https://images.unsplash.com/photo-1587388959664-8c35a87caa58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ymx1cmUlMjBuYXR1cmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+            : imageTo_Url
+        }
+        alt="404 module not found!"
+      />
 
       <div className="infos">
         {data.main ? (

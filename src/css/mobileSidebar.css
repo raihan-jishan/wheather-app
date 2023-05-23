@@ -1,3 +1,5 @@
+/* design the whole mobileSidebar with this page! */
+/* sidebar mobile links */
 .mobileLinks {
   height: 100%;
   display: flex;
@@ -5,7 +7,6 @@
   position: fixed;
   top: 0;
   left: -100%;
-
   background: rgba(99, 99, 99, 0.356);
   width: 120px;
   padding: 20px 0;
@@ -46,6 +47,7 @@
 .hamburger {
   display: none;
 }
+/* responsibe */
 @media screen and (max-width: 700px) {
   .container {
     position: static;

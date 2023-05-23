@@ -1,8 +1,10 @@
 /* design the whole locations page  */
+/* for center a text */
 .textCenter {
   text-align: center;
   font-size: 1.2rem;
 }
+/* row geid clume boxe's */
 .row {
   display: flex;
   align-items: center;
@@ -11,24 +13,29 @@
   background: #69696927;
   border-radius: 1rem;
 }
+/* on hover on it! */
 .rows:hover {
   transform: scale(0.9);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+/* rows image  */
 .rows img {
   width: 100%;
   object-fit: cover;
   border-radius: 1rem;
 }
+/* rows boxes */
 .rows {
   margin: 20px;
   transition: 0.3s;
 }
+/* for display the location on the card  */
 .locations {
   text-align: center;
   margin-top: -50px;
   font-weight: 500;
 }
+/* all in infos all in card */
 .infos {
   position: absolute;
   margin-top: -170px;
@@ -36,6 +43,7 @@
   padding: 12px 20px;
   border-radius: 1rem;
 }
+/* responsibe ness  */
 @media screen and (max-width: 700px) {
   .app {
     overflow: scroll;
@@ -57,7 +65,7 @@
 
     opacity: 0.8;
   }
-  
+  /* on image changing effect . ...  */
   @keyframes example {
     0% {
       background: url("https://burst.shopifycdn.com/photos/cave-of-wonder-and-lights.jpg?width=1200&format=pjpg&exif=1&iptc=1")

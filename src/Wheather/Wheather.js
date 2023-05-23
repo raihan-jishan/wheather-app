@@ -1,3 +1,4 @@
+// on search bar infos and al functionilty added... 
 import React, { useState } from "react";
 import axios from "axios";
 import { CiCloud } from "react-icons/ci";
