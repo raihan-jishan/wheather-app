@@ -54,7 +54,7 @@
   100% { transform: rotate( 0.0deg) }
 }
 /* resonsibe */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 324px) {
     .app input {
         padding: 0.5rem 0.8rem;   
     }
