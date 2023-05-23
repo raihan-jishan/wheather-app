@@ -53,5 +53,10 @@
    60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
   100% { transform: rotate( 0.0deg) }
 }
-
+/* resonsibe */
+@media screen and (max-width: 700px) {
+    .app input {
+        padding: 0.5rem 0.8rem;   
+    }
+}
 
