@@ -1,9 +1,9 @@
 import "../css/mobileSidebar.css";
 import {
-  AiOutlineHome, 
+  AiOutlineHome,
   AiOutlineSetting,
-  AiOutlineCloseCircle
-} from "react-icons/ai"; 
+  AiOutlineCloseCircle,
+} from "react-icons/ai";
 import { BiMapAlt, BiMap } from "react-icons/bi";
 import { MdOutlineExplore } from "react-icons/md";
 import { FaRegCalendarAlt } from "react-icons/fa";
@@ -24,8 +24,11 @@ export default function MobileSidebar() {
   return (
     <>
       {click ? null : (
-        <HiBars3CenterLeft className="hamburger" onClick={handleClick} aria-hidden="true" />
-       
+        <HiBars3CenterLeft
+          className="hamburger"
+          onClick={handleClick}
+          aria-hidden="true"
+        />
       )}
 
       <div className="mobileConatiner">
@@ -33,7 +36,7 @@ export default function MobileSidebar() {
           <ul>
             <li>
               <Link to={"/"} onClick={handleClose}>
-                <AiOutlineHome size={32} />
+                <AiOutlineHome size={52} />
               </Link>
             </li>
             <li>
@@ -42,27 +45,27 @@ export default function MobileSidebar() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <BiMapAlt size={32} />
+                <BiMapAlt size={52} />
               </a>
             </li>
             <li>
               <Link to={"/location"}>
-                <BiMap size={32} />
+                <BiMap size={52} />
               </Link>
             </li>
             <li>
               <a href="http://localhost:3000">
-                <MdOutlineExplore size={32} />
+                <MdOutlineExplore size={52} />
               </a>
             </li>
             <li>
               <a href="http://localhost:3000">
-                <FaRegCalendarAlt size={32} />
+                <FaRegCalendarAlt size={52} />
               </a>
             </li>
             <li>
               <a href="http://localhost:3000">
-                <AiOutlineSetting size={32} />
+                <AiOutlineSetting size={52} />
               </a>
             </li>
             <li>

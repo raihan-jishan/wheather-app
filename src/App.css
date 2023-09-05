@@ -1,5 +1,11 @@
+/*
+  title: App.css file, 
+  desc: simple app.css file this the main file for whole application.
+  date: 05 - 09 - 2023.
+*/
+/* import google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-
+/* basic css code */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,14 +13,17 @@
   list-style: none;
   text-decoration: none;
 }
-
+/* body tag  */
 body {
   font-family: "Montserrat", sans-serif;
-  scroll-behavior: smooth;
-  background: #000;
+  scroll-behavior: smooth;   
+  background: var(--White);
+  color: var(--black);
 }
-
-p {
-  font-size: 1.8rem;
-  font-weight: bold;
+/* root colors */
+:root{
+  --Olivesilver: #ACBCB1;
+  --black:#000;
+  --White:#fff;
+  --transparentOlivesilver: #acbcb12a;
 }

@@ -3,17 +3,17 @@
     desc: simple sidebar for wheather details.
     date: 13 - 5 - 2023.
 
-*/ 
-import "../css/sidebar.css";
+*/
+import "../../css/sidebar.css";
 import { AiOutlineHome, AiOutlineSetting } from "react-icons/ai";
 import { BiMapAlt, BiMap } from "react-icons/bi";
 import { MdOutlineExplore } from "react-icons/md";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import MobileSidebar from "./MobileSidebar";
+import MobileSidebar from "../MobileSidebar";
 export default function Sidebar() {
   return (
-    <> 
+    <>
       <div className="infoContainer">
         <div className="infoLinks">
           <ul>
@@ -37,10 +37,9 @@ export default function Sidebar() {
               </Link>
             </li>
             <li>
-              <Link to={"/location"}> 
+              <Link to={"/location"}>
                 <MdOutlineExplore size={32} />
-                </Link>
-              
+              </Link>
             </li>
             <li>
               <a href="http://localhost:3000">
@@ -58,7 +57,7 @@ export default function Sidebar() {
           </ul>
         </div>
       </div>
-        <MobileSidebar  />
+      <MobileSidebar />
     </>
   );
 }

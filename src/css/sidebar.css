@@ -19,7 +19,7 @@
   border-radius: 1rem;
 }
 .infoLinks ul li a {
-  color: #fff;
+  color: var(--black);
   font-size: 1.3rem;
   font-weight: 700;
 }

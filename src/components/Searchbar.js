@@ -1,6 +1,5 @@
 import { useState } from "react";
-import "../css/searchbar.css";
-import {HiOutlineEmojiHappy  } from 'react-icons/hi';
+import "../css/searchbar.css"; 
 import { AiOutlineSearch, AiOutlineCloseCircle } from "react-icons/ai";
 export default function Searchbar(props) {
   // initialze states
@@ -39,10 +38,10 @@ export default function Searchbar(props) {
         />
         </div>
       ) : (
-        <div className="buttonDiv">
-          <h1 style={{fontWeight:'500'}}>Search something..  <HiOutlineEmojiHappy className="wave" size={35}/></h1>
+        <div className="search-div">
+          
         <AiOutlineSearch
-          size={35}
+          size={50}
           className="searchBarButton wave"
           onClick={showSearchBox} 
         />

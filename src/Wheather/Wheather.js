@@ -1,10 +1,11 @@
-// on search bar infos and al functionilty added... 
+// on search bar infos and al functionilty added...
 import React, { useState } from "react";
-import axios from "axios";
+import "../css/home.css";
+import axios from "axios";  
 import { CiCloud } from "react-icons/ci";
 import { HiCloud } from "react-icons/hi";
 import { GrLocation } from "react-icons/gr";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/Sidebar/Sidebar.js";
 import Searchbar from "../components/Searchbar";
 function Wheather() {
   const [data, setData] = useState({});
@@ -22,60 +23,70 @@ function Wheather() {
     }
   };
   return (
-    <div className="app">
+    <div className="container">
+      {/* date and time bar */}
+      <div className="date-timeInfo">
+        <h1>{new Date().toDateString()}</h1>
+      </div>
+      {/* search bar */}
+      <Searchbar
+        searchLocation={searchLocation}
+        setLocation={setLocation}
+        location={location}
+      />
+      {/* clsoe there */}
       {/* Sidebar */}
-      <Sidebar /> 
+      <Sidebar />
       {/* end Sidebar */}
-       <Searchbar searchLocation={searchLocation} setLocation={setLocation} location={location}/>
-      
-      <div className="container">
-        <div className="top">
-          <div className="location">
-            <p>
-              <GrLocation className="locationIcon" /> {data.name}
-            </p>
-          </div>
-          <div className="temp">
-            {data.main ? (
-              <h1>{(((data.main.temp - 32) * 5) / 9).toFixed()}°C</h1>
-            ) : null}
-          </div>
-          <div className="description">
-            {data.weather ? (
-              <p>
-                {data.weather[0].main}{" "}
-                <HiCloud style={{ fontSize: "2.0rem", color: "silver" }} />
-              </p>
-            ) : null}
-          </div>
+      {/* close there */}
+      <div className="topInfos">
+        <div className="location">
+          <p>
+            <GrLocation className="locationIcon" /> {data.name}
+          </p>
         </div>
+        <div className="temp">
+          {data.main ? (
+            <h1>{(((data.main.temp - 32) * 5) / 9).toFixed()}°C</h1>
+          ) : null}
+        </div>
+        <div className="description">
+          {data.weather ? (
+            <p>
+              {data.weather[0].main}{" "}
+              <HiCloud style={{ fontSize: "2.0rem", color: "silver" }} />
+            </p>
+          ) : null}
+        </div>
+      </div>
 
+      {/* wheather details */}
+      <div className="wheather-details">
         {data.name !== undefined && (
-          <div className="bottom">
-            <div className="feels">
-              {data.main ? (
-                <p className="bold">
+          <div className="feels">
+            {data.main ? (
+              <>
+                <p>
+                  Feels Like
                   {(((data.main.feels_like - 32) * 5) / 9).toFixed(2)}°C
                 </p>
-              ) : null}
-
-              <p>Feels Like</p>
-            </div>
-            <div className="humidity">
-              {data.main ? <p className="bold">{data.main.humidity}%</p> : null}
-              <p>Humidity</p>
-            </div>
-            <div className="wind">
-              {data.wind ? (
-                <p className="bold">{data.wind.speed.toFixed()} MPH</p>
-              ) : null}
+              </>
+            ) : null}
+            <>
               <p>
-                Wind Speed <CiCloud />
+                Humidity
+                {data.main.humidity}%
               </p>
-            </div>
+            </>
+
+            <p>
+              {data.wind.speed.toFixed()} MPH
+              Wind Speed <CiCloud />
+            </p>
           </div>
         )}
       </div>
+      {/* close there */}
     </div>
   );
 }
