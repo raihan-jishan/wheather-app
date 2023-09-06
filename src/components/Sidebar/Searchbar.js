@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../css/searchbar.css"; 
+import "../../css/searchbar.css"; 
 import { AiOutlineSearch, AiOutlineCloseCircle } from "react-icons/ai";
 export default function Searchbar(props) {
   // initialze states

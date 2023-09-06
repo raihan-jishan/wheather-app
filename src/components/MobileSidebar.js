@@ -28,6 +28,7 @@ export default function MobileSidebar() {
           className="hamburger"
           onClick={handleClick}
           aria-hidden="true"
+          size={55}
         />
       )}
 

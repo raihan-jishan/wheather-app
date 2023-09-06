@@ -19,6 +19,7 @@ body {
   scroll-behavior: smooth;   
   background: var(--White);
   color: var(--black);
+  overflow-x: hidden;
 }
 /* root colors */
 :root{

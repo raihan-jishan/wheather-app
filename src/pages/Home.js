@@ -1,18 +1,28 @@
-// on search bar infos and al functionilty added...
+/*
+  title: Home.js file, 
+  desc: main file for home info , location details everything..
+  date: 06 - 09 - 2023.
+*/
+// requre all importnat modules and css file.
 import React, { useState } from "react";
 import "../css/home.css";
-import axios from "axios";  
+import axios from "axios"; // axios for make HTTP requests from node. js or XMLHttpRequests from the browser
+//icon files .
 import { CiCloud } from "react-icons/ci";
 import { HiCloud } from "react-icons/hi";
 import { GrLocation } from "react-icons/gr";
+// sidebaqr
 import Sidebar from "../components/Sidebar/Sidebar.js";
-import Searchbar from "../components/Searchbar";
-function Wheather() {
+// searchbar
+import Searchbar from "../components/Sidebar/Searchbar";
+// whaether function
+function Home() {
+  // initialize useState hook .
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
-
+  // api url.
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=895284fb2d2c50a520ea537456963d9c`;
-
+  // if else satatement.
   const searchLocation = (event) => {
     if (event.key === "Enter") {
       axios.get(url).then((response) => {
@@ -23,27 +33,31 @@ function Wheather() {
     }
   };
   return (
+    // container
     <div className="container">
-      {/* date and time bar */}
-      <div className="date-timeInfo">
-        <h1>{new Date().toDateString()}</h1>
+      <div className="inline-block">
+        {/* Sidebar */}
+        <Sidebar />
+        {/* end Sidebar */}
+        {/* search bar */}
+        <Searchbar
+          searchLocation={searchLocation}
+          setLocation={setLocation}
+          location={location}
+        />
+        {/* clsoe there */}
       </div>
-      {/* search bar */}
-      <Searchbar
-        searchLocation={searchLocation}
-        setLocation={setLocation}
-        location={location}
-      />
-      {/* clsoe there */}
-      {/* Sidebar */}
-      <Sidebar />
-      {/* end Sidebar */}
-      {/* close there */}
+
+      {/* top infos */}
       <div className="topInfos">
         <div className="location">
-          <p>
-            <GrLocation className="locationIcon" /> {data.name}
-          </p>
+          {data.main ? (
+            <p>
+              <GrLocation className="locationIcon" /> {data.name}
+            </p>
+          ) : (
+            <h4>Search something.</h4>
+          )}
         </div>
         <div className="temp">
           {data.main ? (
@@ -80,8 +94,7 @@ function Wheather() {
             </>
 
             <p>
-              {data.wind.speed.toFixed()} MPH
-              Wind Speed <CiCloud />
+              {data.wind.speed.toFixed()} MPH Wind Speed <CiCloud />
             </p>
           </div>
         )}
@@ -91,4 +104,4 @@ function Wheather() {
   );
 }
 
-export default Wheather;
+export default Home;

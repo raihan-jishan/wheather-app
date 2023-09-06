@@ -1,77 +1,72 @@
- /*design the whole wheather page  */
- .date-timeInfo {
-    margin: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top:2px solid  var(--Olivesilver);
-    border-left:2px solid  var(--Olivesilver);
-    border-radius:2px solid  var(--Olivesilver);
-    border-radius: 2rem;
-    
- }
- .date-timeInfo h1 {
-    font-size: 1.8rem;
- }
- /* wheather-details */
- .wheather-details {
-   display: flex;
-   align-items: center;
-   justify-content: center;
- }
- /* location */
- .location {
-   font-size: 3rem;
-   display: flex;
-   align-items: center;
-   justify-content: center;
- }
- .location p {
-   font-size: 3rem;
-   background: var(--transparentOlivesilver);
-   padding: 0px 80px;
-   margin-top: 10px;
-   border-radius: 3rem;
+/*design the whole wheather page  */
 
- }
- /* temp */
- .temp {
-   font-size: 2.4rem;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   margin: 10px;
+/* wheather-details */
+.wheather-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* location */
+.location {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.location p {
+  font-size: 3rem;
+  background: var(--transparentOlivesilver);
+  padding: 0px 80px;
+  margin-top: 10px;
+  border-radius: 3rem;
+}
+.location h4 {
+  text-align: center;
+  margin: 20px;
+}
+/* temp */
+.temp {
+  font-size: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
 }
 .description {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   font-size: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.6rem;
 }
- /* wheather-details */
-   .feels {
-   font-size: 1.8rem;
-   margin: 20px;
-    display: flex; 
-    justify-content:  space-between;
-      align-items: center;
+/* wheather-details */
+.feels {
+  font-size: 1.8rem;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
- }
- 
- .feels p{
-   margin: 20px;
-   background: var(--transparentOlivesilver);
-   border-radius: 2rem;
-   padding: 6px 5px;
- }
- /* responsibe */
+.feels p {
+  margin: 20px;
+  background: var(--transparentOlivesilver);
+  border-radius: 2rem;
+  padding: 6px 5px;
+}
+
+/* responsibe */
 @media screen and (max-width: 700px) {
-    .feels {
-      flex-direction: column;
-      font-size: 2.5rem;
-     
-    }
-    .feels p {
-      padding: 6px 20px;
-    }
+  .feels {
+    flex-direction: column;
+    font-size: 2.5rem;
+  }
+  .feels p {
+    padding: 6px 20px;
+  }
+  /* inline-block */
+  .inline-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

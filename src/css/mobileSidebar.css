@@ -29,7 +29,7 @@
   background: var(--black);
   transition: 0.3s;
   transform: scale(0.9);
-  padding: 0px 160px;
+  padding: 0px 160px; 
 }
 .mobileLinks ul li a:hover {
   color: var(--White);
@@ -41,8 +41,8 @@
 }
 /* hamburger */
 .hamburger {
-  font-size: 2.6rem;
-  margin: 6px;
+  font-size: 2.6rem; 
+  margin: 5px;
 }
 .hamburger {
   display: none;

@@ -1,5 +1,5 @@
 import {Routes as Router, Route} from 'react-router-dom';
-import Wheather from '../Wheather/Wheather.js';
+import Wheather from '../pages/Home.js';
 import Location from '../pages/Location.js';
 export default function Routes() {
     return(
