@@ -17,7 +17,9 @@ const Home = () => {
     setLocation({ latitude, longitude });
     // Make API call to OpenWeatherMap
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=895284fb2d2c50a520ea537456963d9c&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${
+        import.meta.env.VITE_API_KEY
+      }&units=metric`
     )
       .then((response) => response.json())
       .then((data) => {

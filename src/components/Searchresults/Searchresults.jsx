@@ -8,7 +8,9 @@ const Searchresults = () => {
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
   // api url.
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=895284fb2d2c50a520ea537456963d9c`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=${
+    import.meta.VITE_API_KEY
+  }`;
   // if else satatement.
   const searchLocation = (event) => {
     if (event.key === "Enter") {
@@ -51,7 +53,11 @@ const Searchresults = () => {
                         <i className="fa-regular fa-temperature-low text-gray-400"></i>
                       </h1>
                     </p>
-                  ) : <h1 className="text-center p-5 m-20 bg-red-400 rounded-full text-black text-3xl">Search something...</h1>}
+                  ) : (
+                    <h1 className="text-center p-5 m-20 bg-red-400 rounded-full text-black text-3xl">
+                      Search something...
+                    </h1>
+                  )}
                 </h1>
 
                 {data.weather ? (
